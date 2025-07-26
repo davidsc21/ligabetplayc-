@@ -1,0 +1,15 @@
+C:\Users\Usuario\csharp\liga\bin\Debug\net9.0\liga.exe
+C:\Users\Usuario\csharp\liga\bin\Debug\net9.0\liga.deps.json
+C:\Users\Usuario\csharp\liga\bin\Debug\net9.0\liga.runtimeconfig.json
+C:\Users\Usuario\csharp\liga\bin\Debug\net9.0\liga.dll
+C:\Users\Usuario\csharp\liga\bin\Debug\net9.0\liga.pdb
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.AssemblyInfoInputs.cache
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.AssemblyInfo.cs
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.sourcelink.json
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.dll
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\refint\liga.dll
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.pdb
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\liga.genruntimeconfig.cache
+C:\Users\Usuario\csharp\liga\obj\Debug\net9.0\ref\liga.dll
