@@ -2,7 +2,8 @@
 {
     private static void Main(string[] args)
     {
-        while (true)
+        int opcion;
+        do
         {
             Console.Clear();
             Console.WriteLine("╔════════════════════════════════════════════════════════════╗");
@@ -18,7 +19,6 @@
             Console.WriteLine("║  6. ❌ Salir                                               ║");
             Console.WriteLine("╚════════════════════════════════════════════════════════════╝");
             Console.Write("👉 Opción: ");
-            int opcion;
             string? seleccion = Console.ReadLine();
             if (int.TryParse(seleccion, out opcion))
             {
@@ -26,8 +26,7 @@
                 switch (opcion)
                 { //Aqui empieza la ejecucion de la opciones del menú
                     case 1:
-                        Console.WriteLine("administrando torneos");
-                        Console.ReadKey();
+                        Menutorneo.mostrar();
                         break;
                     case 2:
                         break;
@@ -38,16 +37,12 @@
                     case 5:
                         break;
                     case 6:
+                        Console.WriteLine("HASTA LUEGO...");
+                        Console.ReadKey();
                         break;
                 }
             }
-            else
-            {
-                Console.WriteLine("Opcion invalida...");
-                Console.ReadKey();
-                Console.Clear();
-            }
-        }
+        } while (opcion != 6);
             
     }
 }
