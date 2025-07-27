@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using liga.Torneos;
 public static class Menutorneo
 {
     public static void mostrar()
@@ -25,7 +25,16 @@ public static class Menutorneo
             {
                 case 1:
                     Console.Clear();
-                    Console.WriteLine("hola");
+                    Torneo torneo = new Torneo();
+                    Console.Write("Ingrese el ID deseado para el torneo: ");
+                    torneo.Id = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Ingrese el nombre del torneo: ");
+                    torneo.Name = Console.ReadLine();
+                    torneo.Creacion = DateTime.Now;//se agrega automaticamente pues esa es la gracia
+                    Console.Write("Ingrese el dinero del premio mayor del torneo: ");
+                    torneo.Prize = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"Torneo {torneo.Name}, con ID {torneo.Id}, creado Exitosamente!");
+                    Console.WriteLine("Presione cualquier tecla para continuar...");
                     Console.ReadKey();
                     break;
                 case 2:
