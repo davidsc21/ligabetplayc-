@@ -41,7 +41,7 @@ public static class Menutorneo
                     break;
                 case 2:
                     Console.Clear();
-                    Console.Write("Ingrese el ID del torneo que desea buscar:");
+                    Console.Write("Ingrese el ID del torneo que desea buscar: ");
                     string? idinput = Console.ReadLine();
                     if (int.TryParse(idinput, out int id) && id > 0)
                     {
@@ -62,8 +62,27 @@ public static class Menutorneo
                     break;
                 case 3:
                     Console.Clear();
-                    Console.WriteLine("hola3");
-                    Console.ReadKey();
+                    Console.Write("Ingrese el ID del torneo a eliminar: ");
+                    idinput = Console.ReadLine();
+                    if (int.TryParse(idinput, out id) && id > 0)
+                    {
+                        Torneo? deletedtorneo = Registrotorneo.torneosregistrados.FirstOrDefault(t => t.Id == id);
+                        if (deletedtorneo != null)
+                        {
+                            Console.WriteLine($"Eliminando torneo con ID {deletedtorneo.Id}");
+                            Registrotorneo.torneosregistrados.Remove(deletedtorneo);
+                            Console.WriteLine("\nTorneo eliminado con exito!");
+                            Console.WriteLine("\nPresione cualquier tecla para continuar...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Torneo no encontrado...");
+                            Console.WriteLine("\nPresione cualquie tecla para continuar...");
+                            Console.ReadKey();
+                        }
+                    }
+
                     break;
                 case 4:
                     Console.Clear();
