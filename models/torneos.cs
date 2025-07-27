@@ -19,6 +19,12 @@ public class Torneo
         Creacion = creacion;
         Prize = prize;
     }
+    
 
-    public Torneo(){}
+    public Torneo() { }
+
+    public static class Registrotorneo
+    {
+        public static List<Torneo> torneosregistrados = new List<Torneo>();
+    }
 }

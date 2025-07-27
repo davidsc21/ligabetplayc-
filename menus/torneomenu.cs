@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using liga.Torneos;
+using static liga.Torneos.Torneo;
 public static class Menutorneo
 {
     public static void mostrar()
@@ -27,20 +28,37 @@ public static class Menutorneo
                     Console.Clear();
                     Torneo torneo = new Torneo();
                     Console.Write("Ingrese el ID deseado para el torneo: ");
-                    torneo.Id = Convert.ToInt32(Console.ReadLine());
+                    torneo.Id = Convert.ToInt32(Console.ReadLine());//poner validacion
                     Console.Write("Ingrese el nombre del torneo: ");
                     torneo.Name = Console.ReadLine();
                     torneo.Creacion = DateTime.Now;//se agrega automaticamente pues esa es la gracia
                     Console.Write("Ingrese el dinero del premio mayor del torneo: ");
-                    torneo.Prize = Convert.ToInt32(Console.ReadLine());
+                    torneo.Prize = Convert.ToInt32(Console.ReadLine());//poner validacion
                     Console.WriteLine($"Torneo {torneo.Name}, con ID {torneo.Id}, creado Exitosamente!");
                     Console.WriteLine("Presione cualquier tecla para continuar...");
+                    Registrotorneo.torneosregistrados.Add(torneo);
                     Console.ReadKey();
                     break;
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("hola2");
-                    Console.ReadKey();
+                    Console.Write("Ingrese el ID del torneo que desea buscar:");
+                    string? idinput = Console.ReadLine();
+                    if (int.TryParse(idinput, out int id) && id > 0)
+                    {
+                        Torneo? torneobuscado = Registrotorneo.torneosregistrados.FirstOrDefault(t => t.Id == id);
+                        if (torneobuscado != null)
+                        {
+                            Console.WriteLine($"Torneo encontrado!\nID: {torneobuscado.Id}\nNombre: {torneobuscado.Name}\nFecha de creacion: {torneobuscado.Creacion}\nPremio: ${torneobuscado.Prize}");
+                            Console.WriteLine("\nPresione cualquier tecla para continuar...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Torneo no encontrado...");
+                            Console.WriteLine("\nPresione cualquier tecla para continuar...");
+                            Console.ReadKey();
+                        }
+                    }
                     break;
                 case 3:
                     Console.Clear();
