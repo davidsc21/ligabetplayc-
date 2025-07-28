@@ -28,12 +28,15 @@ public static class Menutorneo
                 case 1:
                     Console.Clear();
                     Torneo torneo = new Torneo();
-                    Console.Write("Ingrese el ID deseado para el torneo: ");
+                    Console.Write("Ingrese el ID deseado para la competencia: ");
                     torneo.Id = Convert.ToInt32(Console.ReadLine());//poner validacion
-                    Console.Write("Ingrese el nombre del torneo: ");
+                    Console.Write("Ingrese el nombre de la competencia: ");
                     torneo.Name = Console.ReadLine();
+                    Console.Write("Ingrese el tipo de competencia (Torneo/Liga)");
+                    torneo.Tipo = Console.ReadLine();
+                    Console.Write($"Ingrese el pais que organiza el/la {torneo.Tipo}: ");
                     torneo.Creacion = DateTime.Now;//se agrega automaticamente pues esa es la gracia
-                    Console.Write("Ingrese el dinero del premio mayor del torneo: ");
+                    Console.Write($"Ingrese el dinero del premio mayor del/la {torneo.Tipo}: ");
                     torneo.Prize = Convert.ToInt32(Console.ReadLine());//poner validacion
                     Console.WriteLine($"Torneo {torneo.Name}, con ID {torneo.Id}, creado Exitosamente!");
                     Console.WriteLine("Presione cualquier tecla para continuar...");
